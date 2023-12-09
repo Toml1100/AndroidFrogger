@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:background="#60C87E">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frogger Android"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutDifficulty"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDifficulty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName">
+
+        <ImageButton
+            android:id="@+id/imageButtonEasy"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Easy Difficulty"
+            android:src="@drawable/easy"
+            app:layout_constraintEnd_toStartOf="@id/imageButtonMedium"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="226dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMedium"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Medium Difficulty"
+            android:src="@drawable/medium"
+            app:layout_constraintEnd_toStartOf="@id/imageButtonHard"
+            app:layout_constraintStart_toEndOf="@id/imageButtonEasy" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHard"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Hard Difficulty"
+            android:src="@drawable/hard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageButtonMedium" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonStartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Start Game"
+        app:layout_constraintBottom_toTopOf="@id/buttonViewHighScores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDifficulty" /> <!-- Adjusted constraint -->
+
+    <Button
+        android:id="@+id/buttonViewHighScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="View High Scores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonStartGame" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

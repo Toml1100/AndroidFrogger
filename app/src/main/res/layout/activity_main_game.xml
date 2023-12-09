@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainGame">
+
+    <!-- Example of player character ImageView -->
+
+    <!-- Example of on-screen arrow ImageButtons -->
+    <ImageView
+        android:id="@+id/deadFrog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/deadfrog"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="1dp"/>
+
+    <ImageView
+        android:id="@+id/drownedFrog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/drowning"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="1dp"/>
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Time: 60s"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewLives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lives: 3"
+        android:textSize="18sp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/timerTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Score: 0"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/arrowUp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/arrowup"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/arrowDown"
+        android:scaleType="fitCenter" />
+
+    <ImageButton
+        android:id="@+id/arrowDown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/arrowdown"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitCenter" />
+
+    <ImageButton
+        android:id="@+id/arrowLeft"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/arrowleft"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/arrowDown"
+        android:scaleType="fitCenter" />
+
+    <ImageButton
+        android:id="@+id/arrowRight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/arrowright"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/arrowDown"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/turtleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/turtlegroup"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/logRow1Col1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/turtleGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/turtlegroup"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/logRow1Col1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/leftCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/leftcar"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/playerCharacter"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:id="@+id/rightCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rightcar"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/leftCar"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:id="@+id/leftCar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/leftcar"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rightCar"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:id="@+id/rightCar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rightcar"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/leftCar2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/logRow1Col1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fulllog"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rightCar2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:id="@+id/logRow1Col2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fulllog"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rightCar2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/logRow2Col1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fulllog"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/turtleGroup"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:id="@+id/logRow2Col2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fulllog"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/turtleGroup"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/playerCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/frogger"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/arrowUp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Here to Start Game"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
